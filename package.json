@@ -1,0 +1,23 @@
+{
+  "name": "@goori-soft/logger",
+  "version": "0.0.1",
+  "description": "Simple debug tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goori-soft/logger.git"
+  },
+  "keywords": [
+    "debug",
+    "log"
+  ],
+  "author": "Goori Soft Studio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goori-soft/logger/issues"
+  },
+  "homepage": "https://github.com/goori-soft/logger#readme"
+}
