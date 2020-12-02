@@ -73,18 +73,25 @@ const logger = {
     },
 
     /**
+     * Cria uma linha em branco no console
+     */
+    blank: ()=>{
+        console.log('');
+    },
+
+    /**
      * Trata um erro de acordo com as configurações de config
      */
-    err: (err)=>{
+    err: (err, options)=>{
         err = '[ERROR] ' + err;
         if(logger.config.debugForConsole) console.error(err);
-        if(logger.config.debugForFile) logger.write(err); 
+        if(logger.config.debugForFile) logger.write(err, options); 
 
         return logger;
     },
 
-    error: (err)=>{
-        return logger.err(err);
+    error: (err, options)=>{
+        return logger.err(err, options);
     },
 
     getFilePath: ()=>{
@@ -174,10 +181,10 @@ const logger = {
         return logger;
     },
 
-    warn: (msg)=>{
+    warn: (msg, options)=>{
         msg = '[WARNING] ' + msg;
         if(logger.config.debugForConsole) console.warn(msg);
-        if(logger.config.debugForFile) logger.write(msg); 
+        if(logger.config.debugForFile) logger.write(msg, options);
 
         return logger;
     },
